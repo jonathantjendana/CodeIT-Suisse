@@ -10,7 +10,7 @@
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
     "cron": "^1.2.1",
-    "debug": "^2.6.1",
+    "debug": "^2.6.9",
     "express": "^4.15.2",
     "fcm-push": "^1.1.2",
     "firebase": "^3.7.0",
