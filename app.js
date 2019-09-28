@@ -56,10 +56,6 @@ app.all('*', function(req, res, next) {
  */
 require("./routes/index")(app);
 
-
-
-
-
 // Initializing the server when server.js is being executed
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

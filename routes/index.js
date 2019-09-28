@@ -6,7 +6,8 @@ var index = function(app) {
    be placed ***HERE***
    */
   //http://bigspaceship.github.io/blog/2014/05/14/how-to-create-a-rest-api-with-node-dot-js/
-  require("../controllers/ProjectsWebAPIController.js")(app);
+
+  require("../controllers/WeddingNightmareController.js")(app);
 
   /* GET home page. */
   app.get('/', function(req, res, next) {
