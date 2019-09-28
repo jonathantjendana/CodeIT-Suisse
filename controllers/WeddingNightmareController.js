@@ -225,16 +225,17 @@ var WeddingNightmareController = function (app) {
     })
     app.get("/lottery", function(req, res) {
         var lottery = [ 
-            Math.ceil(Math.random() * 100),    
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
-            Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100),    
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            // Math.ceil(Math.random() * 100), 
+            52,35,28,77,78,24,4,58,48,53
         ]
         res.status(200).send(
             lottery);
