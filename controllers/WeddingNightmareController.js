@@ -25,7 +25,7 @@ var WeddingNightmareController = function (app) {
             var y = queen["j"]
             
             var count = 0;
-            for (var i = 1; i < n-1; i++) {
+            for (var i = 1; i < n; i++) {
                 //x is constant
                 var j = x;
                 var k = y - i;
@@ -41,8 +41,9 @@ var WeddingNightmareController = function (app) {
                     break;
                 }
             }
-            console.log(count)
-            for (var i = 1; i < n-1; i++) {
+            console.log("left"+count)
+            console.log(x + ","+y)
+            for (var i = 1; i < n; i++) {
                 //x is constant
                 var j = x;
                 var k = y + i;
@@ -52,6 +53,7 @@ var WeddingNightmareController = function (app) {
                     if (test == "X") {
                         break;
                     } else if (test == "") {
+                        console.log(j +","+ k)
                         count++;
                     }
 
@@ -59,8 +61,8 @@ var WeddingNightmareController = function (app) {
 
                 }
             }
-            console.log(count)
-            for (var i = 1; i < n-1; i++) {
+            console.log("right" + count)
+            for (var i = 1; i < n; i++) {
                 //y is constant
                 var j = x - i;
                 var k = y;
@@ -77,8 +79,8 @@ var WeddingNightmareController = function (app) {
 
                 }
             }
-            console.log(count)
-            for (var i = 1; i < n-1; i++) {
+            console.log("upper" +count)
+            for (var i = 1; i < n; i++) {
                 //y is constant
                 var j = x + i;
                 var k = y;
@@ -95,9 +97,9 @@ var WeddingNightmareController = function (app) {
 
                 }
             }
-            console.log(count)
+            console.log("bottom" +count)
 
-            for (var i = 1; i < n-1; i++) {
+            for (var i = 1; i < n; i++) {
                 var j = x - i;
                 var k = y - i;
                 try {
@@ -114,7 +116,7 @@ var WeddingNightmareController = function (app) {
                 }
             }
             console.log("top left" +count)
-            for (var i = 1; i < n-1; i++) {
+            for (var i = 1; i < n; i++) {
                 var j = x + i;
                 var k = y + i;
                 try {
@@ -129,7 +131,7 @@ var WeddingNightmareController = function (app) {
                 }
             }
             console.log("right bottom" +count)
-            for (var i = 1; i < n-1; i++) {
+            for (var i = 1; i < n; i++) {
                 var j = x - i;
                 var k = y + i;
                 try {
@@ -146,7 +148,7 @@ var WeddingNightmareController = function (app) {
                 }
             }
             console.log("top right" +count)
-            for (var i = 1; i < n-1; i++) {
+            for (var i = 1; i < n; i++) {
                 var j = x + i;
                 var k = y - i;
                 try {
