@@ -1,5 +1,5 @@
 var WeddingNightmareController = function(app) {
-    app.post("/api/wedding-nightmare", function(req, res) {
+    app.post("/wedding-nightmare", function(req, res) {
         // POST request
         // ...
         try {
