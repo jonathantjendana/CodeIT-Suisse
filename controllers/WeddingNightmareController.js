@@ -204,5 +204,29 @@ var WeddingNightmareController = function (app) {
             res.send(err.message);
         }
     })
+
+    app.post("/generateSequence", function(req, res) {
+        try {
+            var json = req.body;
+            var modules = req.body["modules"];
+            var dependencyPairs = req.body["dependencyPairs"];
+
+            x
+        } catch(err) {
+
+        }
+    })
+
+    app.post("/exponent", function(req, res) {
+        var json = req.body;
+        var n = json["n"]
+        var p = json["p"]
+
+    })
+    app.get("/lottery", function(req, res) {
+        var lottery = [ 23, 48, 84, 97, 66, 93, 18, 100, 2, 4]
+        res.status(200).send(
+            lottery);
+    })
 }
 module.exports = WeddingNightmareController;
