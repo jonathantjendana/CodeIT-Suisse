@@ -224,7 +224,7 @@ var WeddingNightmareController = function (app) {
 
     })
     app.get("/lottery", function(req, res) {
-        var lottery = [ 23, 48, 84, 97, 66, 93, 18, 100, 2, 4]
+        var lottery = [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
         res.status(200).send(
             lottery);
     })
