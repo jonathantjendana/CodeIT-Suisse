@@ -1,3 +1,7 @@
+var Sentiment = require('sentiment')
+var sentiment = new Sentiment();
+
+
 var WeddingNightmareController = function (app) {
     app.post("/chessgame", function (req, res) {
         // POST request
@@ -42,7 +46,7 @@ var WeddingNightmareController = function (app) {
                 }
             }
             console.log("left"+count)
-            console.log(x + ","+y)
+
             for (var i = 1; i < n; i++) {
                 //x is constant
                 var j = x;
@@ -172,5 +176,33 @@ var WeddingNightmareController = function (app) {
             res.send(err.message);
         }
     });
+
+    app.post("/sentiment-analysis", function(req, res){
+        try {
+            var json = req.body;
+            var reviews = json["reviews"];
+            var n = reviews.length;
+            var response = [];
+
+            for(let i = 0; i < n; i++) {
+                var sentence = reviews[i];
+                var result = sentiment.analyze(sentence)
+                // console.log(result);
+                if(result.score > 0) {
+                    response.push("positive")
+                } else {
+                    response.push("negative")
+                }
+            }
+            res.status(200).json({
+                "response" : response
+            });
+
+            // console.log(response);
+
+        } catch(err) {
+            res.send(err.message);
+        }
+    })
 }
 module.exports = WeddingNightmareController;
