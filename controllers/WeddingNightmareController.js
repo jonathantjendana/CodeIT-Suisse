@@ -235,7 +235,7 @@ var WeddingNightmareController = function (app) {
             // Math.ceil(Math.random() * 100), 
             // Math.ceil(Math.random() * 100), 
             // Math.ceil(Math.random() * 100), 
-            100,100,100,100,100,100,100,100,100,100
+            50,50,50,50,50,50,50,50,50,50
         ]
         res.status(200).send(
             lottery);
