@@ -14,7 +14,7 @@
     "express": "^4.15.2",
     "fcm-push": "^1.1.2",
     "firebase": "^3.7.0",
-    "method-override": "^2.3.7",
+    "method-override": "^2.3.10",
     "moment": "^2.17.1",
     "morgan": "^1.8.1",
     "pug": "^2.0.0-beta9",
